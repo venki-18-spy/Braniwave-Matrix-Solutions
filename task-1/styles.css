@@ -1,0 +1,130 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(116deg, #33ffe9, #ca3dcc); /* Soft pastel gradient background */
+    margin: 0;
+    animation: gradientAnimation 0s infinite ease-in-out; /* Animation for background gradient */
+}
+
+@keyframes gradientAnimation {
+  0% { background: linear-gradient(116deg, #bfdf20, #df20bf); }
+}
+
+.container {
+    background-color: #e6d7d7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 28px;
+    color: #7a4b87; /* Soft purple */
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    width: 70%;
+    margin-right: 12px;
+    border: 3px solid #f2d1f0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #b17dba;
+    box-shadow: 0 0 5px rgba(173, 136, 191, 0.6);
+}
+
+button {
+    padding: 12px 18px;
+    background-color: #7a4b87; /* Soft purple */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #7a4b87;
+    transform: scale(1.05);
+}
+
+#clear-btn {
+    background-color: #e84545; /* Vibrant red for the Clear All button */
+}
+
+#clear-btn:hover {
+    background-color: #f16d6d;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+li {
+    background-color: #fff6f9; /* Soft pink background */
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px); /* Start with a slight offset */
+}
+
+li.completed {
+    background-color: #d0f4e8; /* Soft mint green for completed tasks */
+    text-decoration: line-through;
+    color: #a1a1a1;
+}
+
+li button {
+    background-color: #e84545; /* Vibrant red delete button */
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li button:hover {
+    background-color: #f16d6d;
+    transform: scale(1.05);
+}
+
+li:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+li.show {
+    opacity: 1;
+    transform: translateY(0); /* Reset translation */
+}
+
+/* Animation for smooth fade-out when removing tasks */
+@keyframes fadeOut {
+    0% {
+  
